@@ -75,6 +75,8 @@ namespace WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            app.ConfigureCustomExceptionMiddleware();
+
             app.UseCors(builder=> builder.WithOrigins("http://localhost:4200").AllowAnyHeader()); //angular isteðinden gelen isteðe izin ver demek.
 
             app.UseHttpsRedirection();
