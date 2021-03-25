@@ -34,7 +34,7 @@ namespace Business.Concrete
 
 
         //Claim/yetkilendirme işlemleri
-        //[SecuredOperation("product.add,admin")]
+        [SecuredOperation("product.add,admin")]
         [ValidationAspect(typeof(ProductValidator))]
         [CacheRemoveAspect("IProductService.Get")]
         //Hata mesajlı yapılar
